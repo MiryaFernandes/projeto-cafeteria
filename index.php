@@ -44,8 +44,14 @@
             <div class="preco">
                 <h2>R$14,25</h2>
             </div>
+
+            <div class="sabermais">
+                <a href="">Saiba mais.</a>
+            </div>
+
+
         </div>
-        </div>
+        
 
     </main>
     <script src="mobile-navbar.js"></script>
