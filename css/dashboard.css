@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: rgb(242, 215, 206);
+}
+
+header{
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(139,89,80,255);
+    
+}
+
+.titulo-site{
+
+    color: rgb(32, 36, 39);
+    font-family: 'Righteous', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    
+}
+
+main{
+
+    width: 100%;
+    height: 900%;
+}
+
+.selecao{
+
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: rgb(32, 36, 39);
+    font-family: 'Righteous', cursive;
+
+}
+
+.itens{
+
+    width: 100vw;
+    justify-content: space-around;
+    margin-top: 50px;
+
+}
+
+.menu > ul{
+
+    list-style: none;
+}
+
