@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,22 +22,22 @@
             <div class="itens">
                 <div class="produtos">
                     <img src="../icons/list.png">
-                    <a href="">adm. produtos</a>
+                    <a href="../paginas/produtos.php">adm. produtos</a>
                 </div>
 
                 <div class="categorias">
                     <img src="../icons/category-regular.png">
-                    <a href="">adm. de categorias</a>
+                    <a href="../paginas/categorias.php">adm. de categorias</a>
                 </div>
 
                 <div class="categorias">
                     <img src="../icons/contact.png">
-                    <a href="">contatos</a>
+                    <a href="../paginas/contatos.php">contatos</a>
                 </div>
 
                 <div class="categorias">
                     <img src="../icons/user-pin.png">
-                    <a href="">usuarios</a>
+                    <a href="../paginas/usuarios.php">usuarios</a>
                 </div>
             </div>
             <nav class="logout">
