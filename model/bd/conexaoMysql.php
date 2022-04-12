@@ -14,25 +14,32 @@
  const PASSWORD = 'bcd127';
  const DATABASE = 'contatos';
 
- $resultado = conexaoMysql();
-
- function conexaoMysql()
- {
+ function conexaoMysql(){
     $conexao = array();
 
+    //se a conexao for estabelecida com o BD, iremos ter um array de dados sobre a conexao
     $conexao = mysqli_connect(SERVER, USER, PASSWORD, DATABASE);
 
+<<<<<<< HEAD
     
     if($conexao)
         return $conexao
     else
+=======
+    //Validação para verificar se a conexão foi realizada com sucesso
+    if($conexao){
+        return $conexao;
+    }else{
+>>>>>>> 5b9c525d37b8bc44e7c6d02b73ea245c889d3e21
         return false;
-
     }
+}
 
-    function fecharConexaoMysql($conexao)
-    {
-        mysqli_close($conexao);
-    }
+//fecha a conexão do BD no MySql
+function fecharConexaoMySql($conexao){
+
+    mysqli_close($conexao);
+
+};
 
 ?>
