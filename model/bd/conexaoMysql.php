@@ -22,6 +22,7 @@
 
     $conexao = mysqli_connect(SERVER, USER, PASSWORD, DATABASE);
 
+    
     if($conexao)
         return $conexao
     else

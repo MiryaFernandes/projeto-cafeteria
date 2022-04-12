@@ -1,59 +1,74 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-            <nav class="titulo-site">
-                <h1>CMS Grãos de Café</h1>
-                <h2>gerenciamento do conteudo do site</h2>
-            </nav>
-    </header>
-    <main>
-        <nav class="selecao">
-            <div class="itens">
-                <div class="produtos">
-                    <img src="../icons/list.png">
-                    <a href="../paginas/produtos.php">adm. produtos</a>
-                </div>
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title> Cadastro </title>
+        <link rel="stylesheet" type="text/css" href="../css/contatos.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    </head>
+    <body>    
 
-                <div class="categorias">
-                    <img src="../icons/category-regular.png">
-                    <a href="../paginas/categorias.php">adm. de categorias</a>
-                </div>
+        <div class="sidebar">
 
-                <div class="categorias">
-                    <img src="../icons/contact.png">
-                    <a href="../paginas/contatos.php">contatos</a>
+            <div class="logo_content">                
+                <div class="logo">
+                    <h3 class="logo-name">
+                        grãos de café
+                    </h3>
                 </div>
-
-                <div class="categorias">
-                    <img src="../icons/user-pin.png">
-                    <a href="../paginas/usuarios.php">usuarios</a>
+                <div class="btn-toggle">
+                    <i class='bx bx-menu'></i>
+                    <span></span>
                 </div>
             </div>
-            <nav class="logout">
-                <h3>bem vindo</h3>
-                <h3>logout</h3>
-            </nav>
 
-        </nav>
+                <ul class="nav">
+                    <li>
+                        <a href="">
+                        <i class='bx bx-list-ul'></i>
+                        <span>adm. produtos</span>
+                        </a>
+                    </li>
 
-        <nav>
-            <h1>titulo da sessão</h1>
-        </nav>
-    </main>
+                    <li>
+                        <a href="">
+                        <i class='bx bx-category' ></i>
+                        <span>adm. de categorias</span>
+                        </a>
+                    </li>
 
-    <footer>
-        <footer>copyright 2022® | Miryã Elizabeth</footer>
-    </footer>
-</body>
+                    <li>
+                        <a href="">
+                        <i class='bx bxs-contact' ></i>
+                        <span>contatos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                        <i class='bx bx-user-pin' ></i>
+                        <span>usuarios</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../cms/login.php">
+                        <i class='bx bx-log-out' ></i>
+                        <span>log-out</span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+
+        <div class="wrapper">
+            <p>Main Content is here</p>
+        </div>
+
+        
+        <script src="../js/contatos.js"></script>
+    </body>
 </html>
