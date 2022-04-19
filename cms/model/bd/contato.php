@@ -10,8 +10,7 @@ function insertContato($dadosContato)
 
     $sql = "insert into tblcontatos
                 (nome, 
-                telefone, 
-                celular, 
+                telefone,  
                 email)
             values
                 ('".$dadosContato['nome']."',  
@@ -45,7 +44,7 @@ function deleteContato($id)
     $conexao = conexaoMysql();
 
     //script para deletar um registro no BD
-    $sql = "delete from tblcontatos where idcontato=".$id;
+    $sql = "delete from tblcontatos where id=".$id;
 
     //valida se o script esta correto, sem erro de sintaxe e executa no BD
     if(mysqli_query($conexao, $sql))
@@ -65,7 +64,7 @@ function selectAllContatos()
 {
     $conexao = conexaoMysql();
 
-    $sql = "select * from tblcontatos order by idcontato desc";
+    $sql = "select * from tblcontatos order by id desc";
 
     $result = mysqli_query($conexao, $sql);
 
@@ -75,7 +74,7 @@ function selectAllContatos()
         while ($rsDados = mysqli_fetch_assoc($result))
         {
             $arrayDados [$cont] = array(
-                "id"          => $rsDados['idcontato'],
+                "id"          => $rsDados['id'],
                 "nome"        => $rsDados['nome'],
                 "email"       => $rsDados['email'],
                 "numero"      => $rsDados['numero']

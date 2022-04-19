@@ -12,7 +12,7 @@ function inserirContato ($dadosContato)
                 "email"     => $dadosContato['txtEmail'],
             );
 
-            require_once('modelContatos/bd/contato.php');
+            require_once('modelContato/bd/contato.php');
 
             if(insertContato($arrayDados))
                 return true;
@@ -30,7 +30,7 @@ function excluirContato($id)
 {
     if($id != 0 &&  !empty($id) && is_numeric($id))
         {
-            require_once('modelContatos/bd/contato.php');
+            require_once('model/bd/contato.php');
 
             if(deleteContato($id))
                 return true;
@@ -47,7 +47,7 @@ function excluirContato($id)
 
 function listarContato()
 {
-    require_once('modelContatos/bd/contato.php');
+    require_once('model/bd/contato.php');
 
     $dados = selectAllContatos();
 

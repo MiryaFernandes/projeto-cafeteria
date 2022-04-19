@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title> Cadastro </title>
         <link rel="stylesheet" type="text/css" href="../css/categorias.css">
-
+        <link rel="stylesheet" href="../css/bdCategoria.css">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,7 @@
                     </li>
 
                     <li>
-                        <a href="../paginas/contatos.php">
+                        <a href="../cms/contatos.php">
                         <i class='bx bxs-contact' ></i>
                         <span>contatos</span>
                         </a>
