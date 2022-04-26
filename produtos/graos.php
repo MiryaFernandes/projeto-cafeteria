@@ -34,13 +34,13 @@
         </ul>
     </nav>
     </header>
- 
+
     <section class="banner">
-        <a href="#" class="botao">compre agora</a>
+        <a href="#" class="botao">veja mais</a>
     </section>
 
     <section class="shop container">
-        <h2 class="section-title">DESTAQUES</h2>
+        <h2 class="section-title">IMPORTADOS</h2>
     </section>
 
     <section class="shop-content">
@@ -71,7 +71,7 @@
     </section>
 
     <section class="shop container">
-        <h2 class="section-title">LANÇAMENTOS</h2>
+        <h2 class="section-title">NACIONAIS</h2>
     </section>
 
     <section class="shop-content">
@@ -102,38 +102,6 @@
         <span class="price">R$13,95</span>
     </div>
     </section>
-
-    <section class="shop container">
-        <h2 class="section-title">DISPONIVEL NAS CAFETERIAS</h2>
-    </section>
-
-    <section class="shop-content">
-
-    <div class="product-box">
-        <img src="../img/caramel-macchiato-featured-removebg-preview.png" alt="" class="product-img">
-        <h2 class="product-title">Macchiato de caramelo</h2>
-        <span class="price">R$13,95</span>
-    </div>
-
-    <div class="product-box">
-        <img src="../img/caramel-macchiato-featured-removebg-preview.png" alt="" class="product-img">
-        <h2 class="product-title">Macchiato de caramelo</h2>
-        <span class="price">R$13,95</span>
-    </div>
-
-    <div class="product-box">
-        <img src="../img/caramel-macchiato-featured-removebg-preview.png" alt="" class="product-img">
-        <h2 class="product-title">Macchiato de caramelo</h2>
-        <span class="price">R$13,95</span>
-    </div>
-
-    <div class="product-box">
-        <img src="../img/caramel-macchiato-featured-removebg-preview.png" alt="" class="product-img">
-        <h2 class="product-title">Macchiato de caramelo</h2>
-        <span class="price">R$13,95</span>
-    </div>
-    </section>
-
     
     <footer>
         <footer>Copyright 2022 © | Miryã Fernandes</footer>

@@ -1,133 +1,267 @@
 *{
-
     margin: 0;
     padding: 0;
-
-}
-
-a{
-
-    color: rgb(242, 215, 206);
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
-    transition: 0.3s;
-
 }
 
-a:hover{
+body{
 
-    opacity: 0.7;
-}
+    min-height: 100vh;
+    background-color: rgb(242, 215, 206);
 
-.logo{
+} 
 
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Righteous', cursive;
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: rgb(32, 36, 39);
-    height: 8vh;
-}
-
-main{
-    background: rgb(242, 215, 206);
-    background-size: cover;
-    height: 92vh;
-}
-
-.nav-list{
-    list-style: none;
+    padding: 0px 7%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
 }
 
-.nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+header .navbar ul{
+ 
+    list-style: none;
+
 }
 
-.mobile-menu{
+header .navbar ul li{
+
+    position: relative;
+    float: left;
+
+}
+
+header .navbar ul li a{
+
+    font-size: 20px;
+    padding: 20px;
+    color: rgb(242, 215, 206);
+    display: block;
+
+}
+
+header .navbar ul li a:hover{
+
+    background: rgba(213, 120, 84);
+    color: antiquewhite;
+    border-radius: 8px;
+}
+
+header .navbar ul li ul{
+
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: rgb(32, 36, 39);
+    border-radius: 8px;
     display: none;
+}
+
+header .navbar ul li ul li {
+
+    width: 100%;
+    border-top: 1px solid rgb(0,0,0,.1);
+}
+
+header .navbar ul li ul li ul {
+
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: rgb(242, 215, 206);
     cursor: pointer;
+    display: none;
 }
 
-.mobile-menu div{
-    width: 32px;
-    height: 2px;
-    background: rgb(242, 215, 206);
-    margin: 8px;
+@media(max-width:991px){
 
-}
-
-@media(max-width: 999px){
-    body{
-        overflow-x: hidden;
+    header{
+        padding: 20px;
     }
 
-    .nav-list{
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
         position: absolute;
-        top: 8vh;
+        top: 100%;
+        left: 0;
         right: 0;
-        width: 50vw;
-        height: 92vh;
+        border-top: 1px solid rgba(213, 120, 84);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
         background: rgb(32, 36, 39);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
     }
 
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-
-    .mobile-menu{
-        display: block;
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+        
 
     }
-}
 
-.nav-list.active{
-
-    transform: translateX(0);
-
-}
-
-@keyframes navLinkFade {
-
-    from{
-
-        opacity: 0;
-        transform: translateX(50px);
+    header .navbar ul li ul li{
+        background: rgb(46, 51, 54);
     }
 
-    to{
-        opacity: 1;
-        transform: translateX(0);
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
     }
-}
 
-.mobile-menu.active .line1{
+    #menu-bar:checked ~ .navbar{
 
-    transform: rotate(-45deg) translate(-8px, 8px);
+        display: initial;
+
+    }
+
 
 }
 
-.mobile-menu.active .line2{
 
-    opacity: 0;
+/*banner*/
+
+
+.banner{
+
+    width: 100%;
+    height: 600px;
+    background: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
 
 }
 
-.mobile-menu.active .line3{
+.botao{
 
-    transform: rotate(45deg) translate(-5px, -7px);
+    width: 200px;
+    text-align: center;
+    padding: 16px 17px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 420px;
+    transition-duration: 0.4s;
+    background-color: rgb(32, 36, 39);
+    border-radius: 8px;
+    font-weight: bold;
+    color: rgb(242, 215, 206);
+}
+
+.botao:hover{
+    background-color: rgba(213, 120, 84);
+    color: white;
+}
+
+/*produtos*/
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    margin-left: 15px;
+}
+
+.product-box{
+
+    position: relative;
+    background-color: white;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    margin-left: 25px;
+
+
+}
+
+.product-box:hover{
+
+    padding: 10px;
+    border: 1px solid #000;
+    transition: 0.4s;
+
+
+}
+
+.product-img{
+
+    width: 50%;
+    height: auto;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    margin-left: 63px;
+    margin-top: 35px;
+    
+
+}
+
+.product-title{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.price{
+    font-weight: 500;
+    margin-top: 0.5;
+    margin-left: 0.5rem;
+}
+
+/*title*/
+
+section{
+    padding: 7rem 0 1rem;
+
+}
+
+.section-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.shop{
+    margin-top: 2rem;
+}
+
+/*footer*/
+footer{
+    margin-left: 300px;
+    height: 10px;
+    margin-bottom: 2.4rem;
+    margin-top: 1rem;
 
 }

@@ -34,13 +34,13 @@
         </ul>
     </nav>
     </header>
- 
+
     <section class="banner">
-        <a href="#" class="botao">compre agora</a>
+        <a href="#" class="botao">veja mais</a>
     </section>
 
     <section class="shop container">
-        <h2 class="section-title">DESTAQUES</h2>
+        <h2 class="section-title">QUENTES</h2>
     </section>
 
     <section class="shop-content">
@@ -71,7 +71,7 @@
     </section>
 
     <section class="shop container">
-        <h2 class="section-title">LANÇAMENTOS</h2>
+        <h2 class="section-title">FRIAS</h2>
     </section>
 
     <section class="shop-content">
@@ -104,7 +104,7 @@
     </section>
 
     <section class="shop container">
-        <h2 class="section-title">DISPONIVEL NAS CAFETERIAS</h2>
+        <h2 class="section-title">VEGANAS</h2>
     </section>
 
     <section class="shop-content">
