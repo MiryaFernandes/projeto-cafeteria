@@ -36,7 +36,6 @@
     </header>
 
     <section class="banner">
-        <a href="#" class="botao">veja mais</a>
     </section>
 
     <section class="shop container">

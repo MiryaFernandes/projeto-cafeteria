@@ -10,8 +10,7 @@
 </head>
 <body> 
     <header>
-
-    <input type="checkbox" id="menu-bar">
+    <div id="wave-header">    <input type="checkbox" id="menu-bar">
     <label for="menu-bar">menu</label>
 
     <a href="../INDEX/index.php" class="logo"><img src="../img/logo.png" alt="" width="100px"></a>
@@ -33,10 +32,10 @@
         </li>
         </ul>
     </nav>
+    </div>
     </header>
  
     <section class="banner">
-        <a href="#" class="botao">compre agora</a>
     </section>
 
     <section class="shop container">

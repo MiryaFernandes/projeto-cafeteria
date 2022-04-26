@@ -35,9 +35,7 @@
     </nav>
     </header>
 
-    <section class="banner">
-        <a href="#" class="botao">veja mais</a>
-    </section>
+    <section class="banner"></section>
 
     <section class="shop container">
         <h2 class="section-title">IMPORTADOS</h2>
