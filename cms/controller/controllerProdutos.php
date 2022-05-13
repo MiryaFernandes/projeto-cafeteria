@@ -1,19 +1,22 @@
 <?php
 
-function inserirCategoria ($dadosContato)
+function inserirProduto ($dadosContato)
 {
     if(!empty($dadosContato))
     {
-        if(!empty($dadosContato['txtId'] && !empty($dadosContato['txtCategoria'])))
+        if(!empty($dadosContato['txtId'] && !empty($dadosContato['txtNome']) && !empty($dadosContato['txtPreco']) && !empty($dadosContato['txtDestaque']) && !empty($dadosContato['txtObservacao'])))
         {
             $arrayDados = array(
                 "id"      => $dadosContato['txtId'],
-                "categoria"      => $dadosContato['txtCategoria']
+                "nome"      => $dadosContato['txtNome'],
+                "preco"   => $dadosContato['txtPreco'],
+                "destaque"     => $dadosContato['txtDestaque'],
+                "observacao"      => $dadosContato['txtObservacao'],
             );
 
-            require_once('modelContato/bd/categoria.php');
+            require_once('modelContato/bd/produto.php');
 
-            if(insertCategorias($arrayDados))
+            if(insertProduto($arrayDados))
                 return true;
             else
                 return array ('idErro' => 1,
@@ -25,13 +28,13 @@ function inserirCategoria ($dadosContato)
     }
 }
 
-function excluirCategoria($id)
+function excluirProduto($id)
 {
     if($id != 0 &&  !empty($id) && is_numeric($id))
         {
-            require_once('model/bd/categoria.php');
+            require_once('model/bd/contato.php');
 
-            if(deleteCategoria($id))
+            if(deleteContato($id))
                 return true;
             else
                 return array('idErro'   => 3,
@@ -44,11 +47,11 @@ function excluirCategoria($id)
                     );
 }
 
-function listarCategorias()
+function listarProdutos()
 {
-    require_once('model/bd/categoria.php');
+    require_once('model/bd/produto.php');
 
-    $dados = selectAllCategorias();
+    $dados = selectAllProdutos();
 
     if(!empty($dados))
          return $dados;

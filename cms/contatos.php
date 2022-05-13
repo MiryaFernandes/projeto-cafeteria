@@ -48,28 +48,28 @@
 
                 <ul class="nav">
                     <li>
-                        <a href="../paginas/produtos.php">
+                        <a href="../cms/produtos.php">
                         <i class='bx bx-list-ul'></i>
                         <span>adm. produtos</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="../paginas/categorias.php">
+                        <a href="../cms/categorias.php">
                         <i class='bx bx-category' ></i>
                         <span>adm. de categorias</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="cms/contatos.php">
+                        <a href="../cms/contatos.php">
                         <i class='bx bxs-contact' ></i>
                         <span>contatos</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="../paginas/usuarios.php">
+                        <a href="../cms/usuarios.php">
                         <i class='bx bx-user-pin' ></i>
                         <span>usuarios</span>
                         </a>
@@ -85,7 +85,8 @@
         </div>
 
         <div class="wrapper">
-            <p><div id="consultaDeDados">
+            <p>        
+                <div id="consultaDeDados">
                 <table id="tblConsulta" >
                     <tr>
                         <td id="tblTitulo" colspan="6">
@@ -96,6 +97,7 @@
                         <td class="tblColunas destaque"> Nome </td>
                         <td class="tblColunas destaque"> Numero </td>
                         <td class="tblColunas destaque"> Email </td>
+                        <td class="tblColunas destaque"> Ajustes </td>
                     </tr>
                 
                <?php
@@ -106,12 +108,7 @@
                     
                     //estrutura de repetição para retornsar os dados do array
                     //e printar na tela
-                    if(empty($listContato)){
-
-                        return false;
-
-                    } else {
-
+                    if($listContato){
                     foreach($listContato as $item)
                     {
                ?>
@@ -121,32 +118,34 @@
                         <td class="tblColunas registros"><?=$item['email']?></td>
                     
                         <td class="tblColunas registros">
-                            <a href="router.php?component=contatos&action=buscar&id=<?=$item['id']?>">
+                            <a href="router.php?component=categorias&action=buscar&id=<?=$item['id']?>">
 
-                                <img src="../icons/edit.png" alt="Editar" title="Editar" class="editar">
+                            <i class='bx bxs-edit' ></i>Editar<alt="Editar" title="Editar" class="editar">
                             </a>
 
-
-
-
                                 <a onclick="return confirm('Deseja realmente excluir esse item?');" href="router.php?component=contatos&action=deletar&id=<?=$item['id']?>">
-                                    <img src="../icons/trash.png" alt="Excluir" title="Excluir" class="excluir">
+                                    <i class='bx bx-trash'></i>Excluir<alt="Excluir" title="Excluir" class="excluir">
                                 </a>
-                                <img src="../icons/search.png" alt="Visualizar" title="Visualizar" class="pesquisar">
+                                <i class='bx bx-show'></i>Visualizar<alt="Visualizar" title="Visualizar" class="pesquisar">
                         </td>
                     </tr>
 
                 <?php
                     }
-                }
+                        }
                 ?>
             </table>
         </div>
+
+
+                    </nav>
+
+        
             
-            </p>
+</p>
         </div>
 
         
-        <script src="../js/contatos.js"></script>
+        <script src="../js/categorias.js"></script>
     </body>
 </html>

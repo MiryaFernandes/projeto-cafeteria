@@ -2,22 +2,27 @@
 
 require_once('conexaoMysql.php');
 
-function insertContato($dadosContato)
+function insertProduto($dadosContato)
 {
     $statusResposta = (boolean) false;
 
     $conexao = conexaoMysql();
 
-    $sql = "insert into tblcontatos
+    $sql = "insert into tblproduto
                 (id,
                 nome, 
-                telefone,  
-                email)
+                foto,  
+                preco,
+                destaque,
+                observacao)
             values
                 ('".$dadosContato['id']."',
                  '".$dadosContato['nome']."',  
-                 '".$dadosContato['numero']."', 
-                 '".$dadosContato['email']."');";
+                 '".$dadosContato['foto']."', 
+                 '".$dadosContato['preco']."',
+                 '".$dadosContato['destaque']."',
+                 '".$dadosContato['observacao']."'
+                );";
 
     if(mysqli_query($conexao, $sql))
         {
@@ -37,7 +42,7 @@ function insertContato($dadosContato)
     
 }
 
-function deleteContato($id)
+function deleteProduto($id)
 {
     //declaracao de variavel para utilizar no return desta função
     $statusResposta = (boolean) false;
@@ -46,7 +51,7 @@ function deleteContato($id)
     $conexao = conexaoMysql();
 
     //script para deletar um registro no BD
-    $sql = "delete from tblcontatos where id=".$id;
+    $sql = "delete from tblprodutos where id=".$id;
 
     //valida se o script esta correto, sem erro de sintaxe e executa no BD
     if(mysqli_query($conexao, $sql))
@@ -62,11 +67,11 @@ function deleteContato($id)
         
 }
 
-function selectAllContatos()
+function selectAllProdutos()
 {
     $conexao = conexaoMysql();
 
-    $sql = "select * from tblcontatos order by id desc";
+    $sql = "select * from tblprodutos order by id desc";
 
     $result = mysqli_query($conexao, $sql);
 
@@ -78,8 +83,10 @@ function selectAllContatos()
             $arrayDados [$cont] = array(
                 "id"          => $rsDados['id'],
                 "nome"        => $rsDados['nome'],
-                "email"       => $rsDados['email'],
-                "numero"      => $rsDados['numero']
+                "email"       => $rsDados['foto'],
+                "numero"      => $rsDados['preco'],
+                "numero"      => $rsDados['destaque'],
+                "numero"      => $rsDados['observacao'],
             );
             $cont++;
         }
